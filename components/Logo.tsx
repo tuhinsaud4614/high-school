@@ -5,7 +5,7 @@ import Link from "next/link";
 const Logo = () => {
   const { localeConst } = useLocale();
 
-  const height = 56;
+  const height = 48;
   const width = height * 2.760521671502498;
   return (
     <Link href="/">
