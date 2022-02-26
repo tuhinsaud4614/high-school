@@ -17,7 +17,7 @@ const LangSwitch = () => {
     "absolute pointer-events-none font-bold text-xs uppercase w-1/2 text-center top-1/2 -translate-y-1/2";
 
   return (
-    <div className="ml-3 relative inline-block">
+    <div className="ml-auto md:ml-1.5 relative inline-block">
       <input
         id="language-toggle"
         className="hidden"
