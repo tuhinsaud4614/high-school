@@ -18,7 +18,7 @@
     "paths": {
       "@component-navigation": ["components/navigation"],
       "@util": ["utils"],
-      "@locals": ["locals"]
+      "@locale": ["locales"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

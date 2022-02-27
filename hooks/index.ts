@@ -1,4 +1,4 @@
-import { bn, en } from "@locals";
+import { bn, en } from "@locale";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
