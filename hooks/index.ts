@@ -1,5 +1,6 @@
 import { bn, en } from "@locals";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export const useLocale = () => {
   const { push, locale, pathname, asPath, ...rest } = useRouter();
@@ -16,4 +17,16 @@ export const useLocale = () => {
     asPath,
     ...rest,
   } as const;
+};
+
+export const useTouchable = () => {
+  const [touchable, setTouchable] = useState(false);
+  useEffect(() => {
+    setTouchable(
+      typeof window !== "undefined" &&
+        ("ontouchstart" in window || Boolean(window.navigator.maxTouchPoints))
+    );
+  }, []);
+
+  return touchable;
 };
