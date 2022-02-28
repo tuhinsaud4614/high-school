@@ -1,22 +1,24 @@
-import { BottomBar, Header } from "@component-navigation";
 import type { NextPageWithLayout } from "@util";
 import { APP_TITLE } from "@util";
+import { Wrapper } from "components";
 import { useLocale } from "hooks";
 import Head from "next/head";
-import { Fragment, ReactElement } from "react";
+import { ReactElement } from "react";
 
 const Home: NextPageWithLayout = () => {
   const { localeConst } = useLocale();
   return (
     <div className="pb-[3.75rem] md:p-0">
       <Head>
-        <title>{APP_TITLE} | Home</title>
+        <title>
+          {localeConst.APP_TITLE} | {localeConst.ROUTES.home.toUpperCase()}
+        </title>
         <meta
           name="description"
           content={`This is the home page of ${APP_TITLE}`}
         />
       </Head>
-      Home {localeConst.title} Lorem ipsum dolor sit, amet consectetur
+      Home {localeConst.APP_TITLE} Lorem ipsum dolor sit, amet consectetur
       adipisicing elit. Cupiditate magni sit est aut ipsum sapiente sint, natus
       facilis quae laborum quisquam a maxime officia, deleniti vel, assumenda
       numquam ducimus veritatis id voluptate nostrum amet? Voluptates eveniet
@@ -1090,13 +1092,7 @@ const Home: NextPageWithLayout = () => {
 };
 
 Home.getLayout = (page: ReactElement) => {
-  return (
-    <Fragment>
-      <Header />
-      <main className="max-w-5xl mx-auto p-4 mt-16">{page}</main>
-      <BottomBar />
-    </Fragment>
-  );
+  return <Wrapper>{page}</Wrapper>;
 };
 
 export default Home;

@@ -5,26 +5,26 @@ import { useLocale } from "hooks";
 import Head from "next/head";
 import { ReactElement } from "react";
 
-const Teachers: NextPageWithLayout = () => {
+const Academic: NextPageWithLayout = () => {
   const { localeConst } = useLocale();
   return (
     <div>
       <Head>
         <title>
-          {localeConst.APP_TITLE} | {localeConst.ROUTES.teachers}
+          {localeConst.APP_TITLE} | {localeConst.ROUTES.academic}
         </title>
         <meta
           name="description"
           content={`This is the home page of ${APP_TITLE}`}
         />
       </Head>
-      Teachers
+      Academic
     </div>
   );
 };
 
-Teachers.getLayout = (page: ReactElement) => {
+Academic.getLayout = (page: ReactElement) => {
   return <Wrapper>{page}</Wrapper>;
 };
 
-export default Teachers;
+export default Academic;

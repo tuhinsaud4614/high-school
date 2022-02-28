@@ -1,5 +1,5 @@
 export const LOGO_TEXT = "text-bn.svg";
-export const title = "ঘরে বসে পড়াশোনার সহজ সমাধান";
+export const APP_TITLE = "আমিরাবাদ জি.কে. উচ্চ বিদ্যালয়";
 export const ROUTES = {
   home: "হোম",
   aboutUs: "আমাদের সম্পর্কে",

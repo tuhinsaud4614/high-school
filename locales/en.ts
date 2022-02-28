@@ -1,15 +1,15 @@
 export const LOGO_TEXT = "text-en.svg";
-export const title = "Experience Better Learning";
+export const APP_TITLE = "Amirabad G.K. High School";
 export const ROUTES = {
-  home: "home",
-  aboutUs: "about us",
-  teachers: "teachers",
-  alumni: "alumni",
-  academic: "academic",
-  routine: "routine",
-  syllabus: "syllabus",
-  coCurricularActivities: "co-curricular activities",
-  guidelines: "guidelines",
-  noticeBoard: "notice board",
-  gallery: "gallery",
+  home: "Home",
+  aboutUs: "About Us",
+  teachers: "Teachers",
+  alumni: "Alumni",
+  academic: "Academic",
+  routine: "Routine",
+  syllabus: "Syllabus",
+  coCurricularActivities: "Co-Curricular Activities",
+  guidelines: "Guidelines",
+  noticeBoard: "Notice Board",
+  gallery: "Gallery",
 };

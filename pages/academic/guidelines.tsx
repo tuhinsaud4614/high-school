@@ -1,5 +1,30 @@
-const Guidelines = () => {
-  return <div>Guidelines</div>;
+import type { NextPageWithLayout } from "@util";
+import { APP_TITLE } from "@util";
+import { Wrapper } from "components";
+import { useLocale } from "hooks";
+import Head from "next/head";
+import { ReactElement } from "react";
+
+const Guidelines: NextPageWithLayout = () => {
+  const { localeConst } = useLocale();
+  return (
+    <div>
+      <Head>
+        <title>
+          {localeConst.APP_TITLE} | {localeConst.ROUTES.guidelines}
+        </title>
+        <meta
+          name="description"
+          content={`This is the home page of ${APP_TITLE}`}
+        />
+      </Head>
+      Guidelines
+    </div>
+  );
+};
+
+Guidelines.getLayout = (page: ReactElement) => {
+  return <Wrapper>{page}</Wrapper>;
 };
 
 export default Guidelines;
