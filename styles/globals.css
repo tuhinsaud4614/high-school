@@ -4,3 +4,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .home-carousel-bullet {
+    @apply w-5 h-5 border-2 border-white opacity-100 bg-transparent cursor-pointer relative after:content-[''] after:absolute after:top-1/2 after:-translate-y-1/2 after:left-1/2 after:-translate-x-1/2 after:block after:h-2.5 after:w-2.5 after:bg-white after:rounded-full hover:after:bg-red-600;
+  }
+
+  .home-carousel-bullet-active {
+    @apply after:bg-red-600;
+  }
+}

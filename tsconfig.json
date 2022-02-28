@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@component-navigation": ["components/navigation"],
+      "@component/home": ["components/home"],
       "@util": ["utils"],
       "@locale": ["locales"]
     }

@@ -1,15 +1,18 @@
 import { BottomBar, Header } from "@component-navigation";
-import { Fragment, ReactNode } from "react";
+import classNames from "classnames";
+import { Fragment, HTMLAttributes } from "react";
 
-interface Props {
-  children: ReactNode;
-}
-
-const Wrapper = ({ children }: Props) => {
+const Wrapper = ({
+  children,
+  className,
+  ...rest
+}: HTMLAttributes<HTMLDivElement>) => {
   return (
     <Fragment>
       <Header />
-      <main className="max-w-5xl mx-auto p-4 mt-16">{children}</main>
+      <main className={classNames("mt-16", className)} {...rest}>
+        {children}
+      </main>
       <BottomBar />
     </Fragment>
   );

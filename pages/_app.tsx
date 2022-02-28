@@ -2,6 +2,9 @@ import type { AppPropsWithLayout } from "@util";
 import { APP_TITLE } from "@util";
 import Head from "next/head";
 import { Fragment } from "react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {

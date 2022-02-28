@@ -4,9 +4,9 @@ import NavItems from "./NavItems";
 
 const Header = () => {
   return (
-    <header className="h-16 w-screen shadow bg-white fixed top-0 left-0">
+    <header className="h-16 w-screen shadow bg-white fixed top-0 left-0 z-[100]">
       <nav
-        className="max-w-5xl mx-auto h-full flex items-center px-3"
+        className="max-w-6xl mx-auto h-full flex items-center px-3"
         aria-label="Main Navigation"
       >
         <Logo />

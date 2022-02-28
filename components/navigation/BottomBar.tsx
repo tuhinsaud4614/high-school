@@ -31,7 +31,7 @@ const BottomBar = () => {
   return (
     <nav
       aria-label="Bottom Navigation"
-      className="fixed bottom-3 left-1/2 -translate-x-1/2 rounded-[3rem] bg-white shadow-md md:hidden"
+      className="z-[100] fixed bottom-3 left-1/2 -translate-x-1/2 rounded-[3rem] bg-white shadow-md md:hidden"
     >
       <ul className="list-none px-2 py-2 flex items-center justify-evenly">
         {items.map((item, i) => (

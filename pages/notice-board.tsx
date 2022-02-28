@@ -24,7 +24,7 @@ const NoticeBoard: NextPageWithLayout = () => {
 };
 
 NoticeBoard.getLayout = (page: ReactElement) => {
-  return <Wrapper>{page}</Wrapper>;
+  return <Wrapper className="max-w-6xl mx-auto p-4">{page}</Wrapper>;
 };
 
 export default NoticeBoard;
