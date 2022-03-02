@@ -1,5 +1,9 @@
 export const LOGO_TEXT = "text-bn.svg";
 export const APP_TITLE = "আমিরাবাদ জি.কে. উচ্চ বিদ্যালয়";
+export const WELCOME_TEXT = "স্বাগতম";
+export const HOME = {
+  welcome: "স্বাগতম",
+};
 export const ROUTES = {
   home: "হোম",
   aboutUs: "আমাদের সম্পর্কে",

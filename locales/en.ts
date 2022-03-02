@@ -1,5 +1,8 @@
 export const LOGO_TEXT = "text-en.svg";
 export const APP_TITLE = "Amirabad G.K. High School";
+export const HOME = {
+  welcome: "Welcome",
+};
 export const ROUTES = {
   home: "Home",
   aboutUs: "About Us",

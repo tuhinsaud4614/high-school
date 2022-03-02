@@ -45,48 +45,46 @@ const Carousel = () => {
   const imageWidth = 1920;
   const imageHeight = 600;
   return (
-    <div className="pt-2">
-      <Swiper
-        modules={[Autoplay, EffectFade, Pagination]}
-        slidesPerView={1}
-        effect="fade"
-        pagination={{
-          clickable: true,
-          bulletActiveClass:
-            "swiper-pagination-bullet-active home-carousel-bullet-active",
-          bulletClass: "swiper-pagination-bullet home-carousel-bullet",
-          clickableClass:
-            "bg-black/30 !bottom-0 flex items-center justify-center py-2 px-4",
-        }}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        speed={1000}
-        loop
-      >
-        <SwiperSlide>
-          <CarouselItem
-            image={{ alt: "Slide", src: "/home.jpeg" }}
-            imageHeight={imageHeight}
-            imageWidth={imageWidth}
-          >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ut
-            dignissimos soluta aperiam iste veniam voluptates impedit ex.
-          </CarouselItem>
-        </SwiperSlide>
-        <SwiperSlide>
-          <CarouselItem
-            image={{ alt: "Slide", src: "/home1.jpeg" }}
-            imageHeight={imageHeight}
-            imageWidth={imageWidth}
-          >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ut
-            dignissimos soluta aperiam iste veniam voluptates impedit ex.
-          </CarouselItem>
-        </SwiperSlide>
-      </Swiper>
-    </div>
+    <Swiper
+      modules={[Autoplay, EffectFade, Pagination]}
+      slidesPerView={1}
+      effect="fade"
+      pagination={{
+        clickable: true,
+        bulletActiveClass:
+          "swiper-pagination-bullet-active home-carousel-bullet-active",
+        bulletClass: "swiper-pagination-bullet home-carousel-bullet",
+        clickableClass:
+          "bg-black/30 !bottom-0 flex items-center justify-center py-2 px-4",
+      }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      speed={1000}
+      loop
+    >
+      <SwiperSlide>
+        <CarouselItem
+          image={{ alt: "Slide", src: "/home.jpeg" }}
+          imageHeight={imageHeight}
+          imageWidth={imageWidth}
+        >
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ut
+          dignissimos soluta aperiam iste veniam voluptates impedit ex.
+        </CarouselItem>
+      </SwiperSlide>
+      <SwiperSlide>
+        <CarouselItem
+          image={{ alt: "Slide", src: "/home1.jpeg" }}
+          imageHeight={imageHeight}
+          imageWidth={imageWidth}
+        >
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ut
+          dignissimos soluta aperiam iste veniam voluptates impedit ex.
+        </CarouselItem>
+      </SwiperSlide>
+    </Swiper>
   );
 };
 

@@ -1,4 +1,4 @@
-import { HomeCarousel } from "@component/home";
+import { HomeCarousel, HomeWelcome } from "@component/home";
 import type { NextPageWithLayout } from "@util";
 import { APP_TITLE } from "@util";
 import { Wrapper } from "components";
@@ -7,7 +7,7 @@ import Head from "next/head";
 import { ReactElement } from "react";
 
 const Home: NextPageWithLayout = () => {
-  const { localeConst } = useLocale();
+  const { localeConst, locale } = useLocale();
   return (
     <div className="pb-[3.75rem] md:p-0">
       <Head>
@@ -20,7 +20,9 @@ const Home: NextPageWithLayout = () => {
         />
       </Head>
       <HomeCarousel />
-      <section className="max-w-6xl mx-auto p-4">main</section>
+      <section className="max-w-6xl mx-auto p-3">
+        <HomeWelcome />
+      </section>
     </div>
   );
 };
