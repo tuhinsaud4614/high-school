@@ -16,7 +16,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body className="bg-zinc-50">
+        <body className="bg-neutral-50">
           <Main />
           <div id="presentational" role="presentation"></div>
           <NextScript />
