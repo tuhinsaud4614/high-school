@@ -24,10 +24,10 @@ const NavItem = ({ active, title, to, children, classes }: Props) => {
         <a
           className={classNames(
             "px-3 py-1.5 flex items-center capitalize",
-            "hover:bg-indigo-500 hover:text-white hover:shadow-md hover:shadow-indigo-500/50",
+            "hover:bg-blue-500 hover:text-white hover:shadow-md hover:shadow-blue-500/50",
             active
-              ? "bg-indigo-600 text-white shadow-md shadow-indigo-500/50"
-              : "text-indigo-600",
+              ? "bg-blue-600 text-white shadow-md shadow-blue-500/50"
+              : "text-blue-600",
             classes?.root
           )}
         >

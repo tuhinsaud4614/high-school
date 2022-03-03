@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ReactNode } from "react";
-import { Autoplay, EffectFade, Pagination } from "swiper";
+import { Autoplay, EffectFade } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 interface Props {
@@ -24,8 +24,9 @@ const CarouselItem = ({ children, imageHeight, imageWidth, image }: Props) => {
             layout="fill"
             objectFit="cover"
             priority
+            className="animate-zooming"
           />
-          <div className="hidden md:flex absolute inset-0 p-10 overflow-hidden items-end justify-center">
+          <div className="hidden md:flex absolute inset-0 p-10 overflow-hidden items-end justify-center bg-gradient-to-t from-black/75 via-black/0">
             <h3
               style={{
                 textShadow: "2px 1px 2px rgba(0, 0, 0, 0.6)",
@@ -46,23 +47,25 @@ const Carousel = () => {
   const imageHeight = 600;
   return (
     <Swiper
-      modules={[Autoplay, EffectFade, Pagination]}
+      // modules={[Autoplay, EffectFade, Pagination]}
+      modules={[Autoplay, EffectFade]}
       slidesPerView={1}
       effect="fade"
-      pagination={{
-        clickable: true,
-        bulletActiveClass:
-          "swiper-pagination-bullet-active home-carousel-bullet-active",
-        bulletClass: "swiper-pagination-bullet home-carousel-bullet",
-        clickableClass:
-          "bg-black/30 !bottom-0 flex items-center justify-center py-2 px-4",
-      }}
+      // pagination={{
+      //   clickable: true,
+      //   bulletActiveClass:
+      //     "swiper-pagination-bullet-active home-carousel-bullet-active",
+      //   bulletClass: "swiper-pagination-bullet home-carousel-bullet",
+      //   clickableClass:
+      //     "bg-black/30 !bottom-0 flex items-center justify-center py-2 px-4",
+      // }}
       autoplay={{
-        delay: 2500,
+        delay: 5000,
         disableOnInteraction: false,
       }}
-      speed={1000}
+      speed={5000}
       loop
+      allowTouchMove={false}
     >
       <SwiperSlide>
         <CarouselItem

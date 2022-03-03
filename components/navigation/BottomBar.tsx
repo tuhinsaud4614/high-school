@@ -39,10 +39,10 @@ const BottomBar = () => {
             <Link href={item.to}>
               <a
                 className={classNames(
-                  "flex items-center justify-center w-12 h-8 rounded-full hover:text-white hover:bg-indigo-500 hover:shadow-md hover:shadow-indigo-500/50 transition-colors",
+                  "flex items-center justify-center w-12 h-8 rounded-full hover:text-white hover:bg-blue-500 hover:shadow-md hover:shadow-blue-500/50 transition-colors",
                   pathname === item.to
-                    ? "text-white bg-indigo-500 shadow-md shadow-indigo-500/50"
-                    : "text-indigo-500"
+                    ? "text-white bg-blue-500 shadow-md shadow-blue-500/50"
+                    : "text-blue-500"
                 )}
               >
                 {item.icon}
