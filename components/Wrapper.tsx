@@ -1,4 +1,4 @@
-import { BottomBar, Header } from "@component-navigation";
+import { BottomBar, Footer, Header } from "@component-navigation";
 import classNames from "classnames";
 import { Fragment, HTMLAttributes } from "react";
 
@@ -13,6 +13,7 @@ const Wrapper = ({
       <main className={classNames("mt-16", className)} {...rest}>
         {children}
       </main>
+      <Footer />
       <BottomBar />
     </Fragment>
   );

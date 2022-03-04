@@ -8,6 +8,26 @@ export const HOME = {
   headSirName: "জনাব আবদুল রহিম",
   headSirTitle: "প্রধান শিক্ষক",
 };
+export const FOOTER = {
+  contact: {
+    title: "যোগাযোগ করুন",
+    address: {
+      label: "যোগাযোগ করুন",
+      value: "দামোদরদী, বিষ্ণুপুর, চাঁদপুর সদর - 3602",
+    },
+    email: {
+      label: "ইমেইল করুন",
+      value: "info@amirabad.g.k.highschol.edu.bd",
+    },
+    mobile: {
+      label: "কল করুন",
+      value: "+৮৮০১২৩৪৫৬৭৮৯০",
+    },
+    social: {
+      label: "আমাদের সাথে থাকুন",
+    },
+  },
+};
 export const ROUTES = {
   home: "হোম",
   aboutUs: "আমাদের সম্পর্কে",

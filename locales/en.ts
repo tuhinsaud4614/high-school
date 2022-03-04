@@ -7,6 +7,26 @@ export const HOME = {
   headSirName: "Mr. Abdul Rahim",
   headSirTitle: "Headmaster",
 };
+export const FOOTER = {
+  contact: {
+    title: "Get in touch",
+    address: {
+      label: "contact us",
+      value: "DAMODARDI, BISHNUPUR, CHANDPUR SADAR - 3602",
+    },
+    email: {
+      label: "email us",
+      value: "info@amirabad.g.k.highschol.edu.bd",
+    },
+    mobile: {
+      label: "call us",
+      value: "+8801234567890",
+    },
+    social: {
+      label: "contact with us",
+    },
+  },
+};
 export const ROUTES = {
   home: "Home",
   aboutUs: "About Us",
