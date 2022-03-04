@@ -1,4 +1,9 @@
-import { HomeCarousel, HomeHeadMasterCard, HomeWelcome } from "@component/home";
+import {
+  HomeCarousel,
+  HomeHeadMasterCard,
+  HomeNoticeBox,
+  HomeWelcome,
+} from "@component/home";
 import type { NextPageWithLayout } from "@util";
 import { APP_TITLE } from "@util";
 import { Wrapper } from "components";
@@ -22,6 +27,7 @@ const Home: NextPageWithLayout = () => {
       <HomeCarousel />
       <HomeWelcome />
       <HomeHeadMasterCard />
+      <HomeNoticeBox />
     </div>
   );
 };

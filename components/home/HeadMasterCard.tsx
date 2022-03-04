@@ -20,14 +20,16 @@ const HeadMasterCard = () => {
       </div>
       <div className="md:flex-1 md:pl-8 mt-3 md:mt-0">
         <div className="bg-white shadow-md p-4 rounded-3xl">
-          <blockquote className="text-neutral-800 relative after:absolute after:content-['“'] after:text-neutral-400 after:top-0 after:-left-2.5 after:leading-[0.6] after:text-6xl before:content-['”'] before:absolute before:leading-[0] before:text-neutral-400 before:-bottom-[5%] before:right-0 before:text-6xl px-3">
+          <blockquote className="text-neutral-800 relative after:absolute after:content-['“'] after:text-neutral-400 after:top-0 after:-left-2.5 after:leading-[0.6] after:text-6xl before:content-['”'] before:absolute before:leading-[0] before:text-neutral-400 before:-bottom-[15%] before:right-0 before:text-6xl px-3">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Exercitationem laudantium, porro est repellendus consequuntur
             maiores vitae odit dignissimos ratione placeat quod sapiente quaerat
             excepturi ipsa amet.
           </blockquote>
           <h6 className="text-[#757575] flex flex-col items-end border-t border-blue-600 mt-3 ml-auto w-fit">
-            <strong>{localeConst.HOME.headSirName}</strong>
+            <strong className="text-blue-500">
+              {localeConst.HOME.headSirName}
+            </strong>
             <span>-{localeConst.HOME.headSirTitle}</span>
           </h6>
         </div>
