@@ -66,6 +66,7 @@ const Carousel = () => {
       speed={5000}
       loop
       allowTouchMove={false}
+      className="h-[50vh] md:h-[70vh]"
     >
       <SwiperSlide>
         <CarouselItem

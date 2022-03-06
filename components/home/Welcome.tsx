@@ -19,13 +19,13 @@ const Welcome = () => {
         {locale !== "bn" && (
           <span className="text-xs md:lg text-blue-500">To</span>
         )}
-        <span className="text-lg text-center text-blue-600">
+        <span className="text-xl text-center text-blue-600 font-bold">
           {localeConst.APP_TITLE}
         </span>
       </h1>
-      <section className="bg-teal-50">
+      <section className="bg-[#a6d6c9]">
         <div className="md:flex md:justify-center max-w-6xl mx-auto p-4">
-          <div className="relative h-[11.25rem] md:h-auto md:order-2 md:basis-1/2 bg-blue-400 rounded-xl">
+          <div className="relative h-[11.25rem] md:h-auto md:order-2 md:basis-1/2 bg-blue-500 rounded-xl">
             <div className="absolute inset-0 md:inset-4">
               <div className=" w-full h-full relative rounded-lg overflow-hidden">
                 <Image

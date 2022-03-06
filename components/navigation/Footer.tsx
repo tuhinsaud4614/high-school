@@ -1,5 +1,7 @@
+import classNames from "classnames";
 import { useLocale } from "hooks";
 import Image from "next/image";
+import Link from "next/link";
 import { ReactNode } from "react";
 import {
   IoLogoFacebook,
@@ -24,15 +26,39 @@ const InfoItem = ({
   );
 };
 
-const Footer = () => {
-  const { localeConst } = useLocale();
+const LinkItem = ({
+  to,
+  active,
+  children,
+}: {
+  active?: boolean;
+  to: string;
+  children?: ReactNode;
+}) => {
   return (
-    <footer className="bg-black mt-4">
-      <section className="max-w-6xl mx-auto p-4 flex items-center">
-        <div className="flex-grow">
+    <Link href={to}>
+      <a
+        className={classNames(
+          "mt-3 inline-block capitalize mr-4 md:mr-0",
+          "hover:text-blue-400",
+          active ? "text-blue-400" : "text-white"
+        )}
+      >
+        {children}
+      </a>
+    </Link>
+  );
+};
+
+const Footer = () => {
+  const { localeConst, pathname } = useLocale();
+  return (
+    <footer className="bg-black mt-4 pb-16 md:pb-0">
+      <section className="max-w-6xl mx-auto flex md:items-center flex-col md:flex-row">
+        <div className="flex-grow p-4">
           <Image src="/text-bn.svg" alt="Logo" width={320} height={180} />
         </div>
-        <div className="flex-grow flex flex-col">
+        <div className="flex-grow flex flex-col p-4">
           <h6 className="text-white text-3xl">
             {localeConst.FOOTER.contact.title}
           </h6>
@@ -83,8 +109,30 @@ const Footer = () => {
             </div>
           </InfoItem>
         </div>
-        <div className="flex-grow"></div>
+        <div className="flex-grow self-start p-4">
+          <h6 className="text-white text-xl capitalize">
+            {localeConst.FOOTER.links.title}
+          </h6>
+          <div className="flex flex-row flex-wrap md:flex-col">
+            <LinkItem to="/about-us" active={pathname === "/about-us"}>
+              {localeConst.ROUTES.aboutUs}
+            </LinkItem>
+            <LinkItem to="/guidelines" active={pathname === "/guidelines"}>
+              {localeConst.ROUTES.guidelines}
+            </LinkItem>
+            <LinkItem to="/notice-board" active={pathname === "/notice-board"}>
+              {localeConst.ROUTES.noticeBoard}
+            </LinkItem>
+            <LinkItem to="/gallery" active={pathname === "/gallery"}>
+              {localeConst.ROUTES.gallery}
+            </LinkItem>
+          </div>
+        </div>
       </section>
+      <div className="max-w-6xl mx-auto text-white text-center p-4">
+        <hr className="border-t border-white -translate-y-4 w-full" />
+        {localeConst.FOOTER.copyRight}
+      </div>
     </footer>
   );
 };

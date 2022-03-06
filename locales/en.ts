@@ -26,6 +26,11 @@ export const FOOTER = {
       label: "contact with us",
     },
   },
+  links: {
+    title: "Important links",
+  },
+  copyRight: `Copyright © ${new Date().getFullYear()} ${APP_TITLE}. All
+  Rights Reserved.`,
 };
 export const ROUTES = {
   home: "Home",

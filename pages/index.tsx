@@ -17,7 +17,7 @@ const Home: NextPageWithLayout = () => {
     <div className="pb-[3.75rem] md:p-0">
       <Head>
         <title>
-          {localeConst.APP_TITLE} | {localeConst.ROUTES.home.toUpperCase()}
+          {localeConst.ROUTES.home.toUpperCase()} | {localeConst.APP_TITLE}
         </title>
         <meta
           name="description"

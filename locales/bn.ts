@@ -27,6 +27,13 @@ export const FOOTER = {
       label: "আমাদের সাথে থাকুন",
     },
   },
+  links: {
+    title: "গুরুত্বপূর্ণ লিঙ্ক সমূহ",
+  },
+  copyRight: `কপিরাইট © ${new Date()
+    .getFullYear()
+    .toLocaleString("bn")
+    .replace(",", "")} ${APP_TITLE}। সমস্ত অধিকার সংরক্ষিত।`,
 };
 export const ROUTES = {
   home: "হোম",
