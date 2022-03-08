@@ -1,6 +1,7 @@
+import { PATHS } from "@util";
 import { useLocale } from "hooks";
 import NavItem from "./NavItem";
-import SubNavItems from "./SubNavItems";
+import NestedNavItems from "./NestedNavItems";
 
 const NavItems = () => {
   const { pathname, localeConst } = useLocale();
@@ -8,62 +9,62 @@ const NavItems = () => {
     <ul className="list-none ml-auto flex-grow-1 hidden md:flex items-center justify-end">
       <NavItem
         title={localeConst.ROUTES.aboutUs}
-        to="/about-us"
-        active={pathname === "/about-us"}
+        to={PATHS.aboutUs}
+        active={pathname === PATHS.aboutUs}
         classes={{ container: "ml-1.5 group relative", root: "rounded-md" }}
       >
-        <SubNavItems>
+        <NestedNavItems>
           <NavItem
             title={localeConst.ROUTES.teachers}
-            to="/about-us/teachers"
-            active={pathname === "/about-us/teachers"}
+            to={PATHS.teachers}
+            active={pathname === PATHS.teachers}
           />
           <NavItem
             title={localeConst.ROUTES.alumni}
-            to="/about-us/alumni"
-            active={pathname === "/about-us/alumni"}
+            to={PATHS.alumni}
+            active={pathname === PATHS.alumni}
           />
-        </SubNavItems>
+        </NestedNavItems>
       </NavItem>
       <NavItem
         title={localeConst.ROUTES.academic}
-        to="/academic"
-        active={pathname === "/academic"}
+        to={PATHS.academic}
+        active={pathname === PATHS.academic}
         classes={{ container: "ml-1.5 group relative", root: "rounded-md" }}
       >
-        <SubNavItems>
+        <NestedNavItems>
           <NavItem
             title={localeConst.ROUTES.routine}
-            to="/academic/routines"
-            active={pathname === "/academic/routines"}
+            to={PATHS.routines}
+            active={pathname === PATHS.routines}
           />
           <NavItem
             title={localeConst.ROUTES.syllabus}
-            to="/academic/syllabus"
-            active={pathname === "/academic/syllabus"}
+            to={PATHS.syllabus}
+            active={pathname === PATHS.syllabus}
           />
           <NavItem
             title={localeConst.ROUTES.coCurricularActivities}
-            to="/academic/co-curricular-activities"
-            active={pathname === "/academic/co-curricular-activities"}
+            to={PATHS.coCurricularActivities}
+            active={pathname === PATHS.coCurricularActivities}
           />
           <NavItem
             title={localeConst.ROUTES.guidelines}
-            to="/academic/guidelines"
-            active={pathname === "/academic/guidelines"}
+            to={PATHS.guidelines}
+            active={pathname === PATHS.guidelines}
           />
-        </SubNavItems>
+        </NestedNavItems>
       </NavItem>
       <NavItem
         title={localeConst.ROUTES.noticeBoard}
-        to="/notice-board"
-        active={pathname === "/notice-board"}
+        to={PATHS.noticeBoard}
+        active={pathname === PATHS.noticeBoard}
         classes={{ root: "rounded-md" }}
       />
       <NavItem
         title={localeConst.ROUTES.gallery}
-        to="/gallery"
-        active={pathname === "/gallery"}
+        to={PATHS.gallery}
+        active={pathname === PATHS.gallery}
         classes={{ root: "rounded-md" }}
       />
     </ul>

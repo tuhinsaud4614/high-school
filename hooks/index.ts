@@ -1,6 +1,9 @@
 import { bn, en } from "@locale";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
+
+export const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 export const useLocale = () => {
   const { push, locale, pathname, asPath, ...rest } = useRouter();
@@ -29,4 +32,46 @@ export const useTouchable = () => {
   }, []);
 
   return touchable;
+};
+
+export const useMediaQuery = (query: string) => {
+  const supportMatchMedia =
+    typeof window !== "undefined" && typeof window.matchMedia !== "undefined";
+
+  const [touchable, setTouchable] = useState(false);
+  const [matched, setMatched] = useState(() => {
+    if (supportMatchMedia) {
+      return window.matchMedia(query).matches;
+    }
+    return false;
+  });
+
+  useIsomorphicLayoutEffect(() => {
+    setTouchable(
+      typeof window !== "undefined" &&
+        ("ontouchstart" in window || Boolean(window.navigator.maxTouchPoints))
+    );
+
+    if (!supportMatchMedia) {
+      return undefined;
+    }
+
+    let active = true;
+    const media = window.matchMedia(query);
+
+    const listener = () => {
+      if (active) {
+        setMatched(media.matches);
+      }
+    };
+
+    listener();
+    media.addListener(listener);
+    return () => {
+      active = false;
+      media.removeListener(listener);
+    };
+  }, [query, supportMatchMedia]);
+
+  return [matched, touchable];
 };
