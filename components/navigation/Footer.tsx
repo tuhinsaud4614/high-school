@@ -1,3 +1,4 @@
+import { PATHS } from "@util";
 import classNames from "classnames";
 import { useLocale } from "hooks";
 import Image from "next/image";
@@ -114,16 +115,22 @@ const Footer = () => {
             {localeConst.FOOTER.links.title}
           </h6>
           <div className="flex flex-row flex-wrap md:flex-col">
-            <LinkItem to="/about-us" active={pathname === "/about-us"}>
+            <LinkItem to={PATHS.aboutUs} active={pathname === PATHS.aboutUs}>
               {localeConst.ROUTES.aboutUs}
             </LinkItem>
-            <LinkItem to="/guidelines" active={pathname === "/guidelines"}>
+            <LinkItem
+              to={PATHS.guidelines}
+              active={pathname === PATHS.guidelines}
+            >
               {localeConst.ROUTES.guidelines}
             </LinkItem>
-            <LinkItem to="/notice-board" active={pathname === "/notice-board"}>
+            <LinkItem
+              to={PATHS.noticeBoard}
+              active={pathname === PATHS.noticeBoard}
+            >
               {localeConst.ROUTES.noticeBoard}
             </LinkItem>
-            <LinkItem to="/gallery" active={pathname === "/gallery"}>
+            <LinkItem to={PATHS.gallery} active={pathname === PATHS.gallery}>
               {localeConst.ROUTES.gallery}
             </LinkItem>
           </div>

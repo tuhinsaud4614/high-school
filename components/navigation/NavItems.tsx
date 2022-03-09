@@ -1,19 +1,29 @@
 import { PATHS } from "@util";
+import { useAnimation } from "framer-motion";
 import { useLocale } from "hooks";
 import NavItem from "./NavItem";
 import NestedNavItems from "./NestedNavItems";
 
 const NavItems = () => {
   const { pathname, localeConst } = useLocale();
+  const aboutControls = useAnimation();
+  const academicControls = useAnimation();
+
   return (
     <ul className="list-none ml-auto flex-grow-1 hidden md:flex items-center justify-end">
       <NavItem
         title={localeConst.ROUTES.aboutUs}
         to={PATHS.aboutUs}
         active={pathname === PATHS.aboutUs}
-        classes={{ container: "ml-1.5 group relative", root: "rounded-md" }}
+        classes={{ container: "ml-1.5 relative", root: "rounded-md" }}
+        onMouseEnter={() => {
+          aboutControls.start("to");
+        }}
+        onMouseLeave={() => {
+          aboutControls.start("from");
+        }}
       >
-        <NestedNavItems>
+        <NestedNavItems controls={aboutControls}>
           <NavItem
             title={localeConst.ROUTES.teachers}
             to={PATHS.teachers}
@@ -31,8 +41,14 @@ const NavItems = () => {
         to={PATHS.academic}
         active={pathname === PATHS.academic}
         classes={{ container: "ml-1.5 group relative", root: "rounded-md" }}
+        onMouseEnter={() => {
+          academicControls.start("to");
+        }}
+        onMouseLeave={() => {
+          academicControls.start("from");
+        }}
       >
-        <NestedNavItems>
+        <NestedNavItems controls={academicControls}>
           <NavItem
             title={localeConst.ROUTES.routine}
             to={PATHS.routines}

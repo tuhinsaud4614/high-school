@@ -1,25 +1,25 @@
 import classNames from "classnames";
 import { useTouchable } from "hooks";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 import { IoChevronDown } from "react-icons/io5";
 
-interface Props {
+interface Props extends HTMLAttributes<HTMLLIElement> {
   active?: boolean;
   to: string;
   title: string;
-  children?: ReactNode;
   classes?: {
     container?: string;
     root?: string;
   };
+  children?: ReactNode;
 }
 
-const NavItem = ({ active, title, to, children, classes }: Props) => {
+const NavItem = ({ active, title, to, children, classes, ...rest }: Props) => {
   const touchable = useTouchable();
 
   return (
-    <li className={classNames(classes?.container)}>
+    <li {...rest} className={classNames(classes?.container)}>
       <Link href={to}>
         <a
           className={classNames(

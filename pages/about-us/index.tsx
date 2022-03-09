@@ -16,7 +16,7 @@ const AboutUs: NextPageWithLayout = () => {
     <Fragment>
       <Head>
         <title>
-          {localeConst.APP_TITLE} | {localeConst.ROUTES.aboutUs}
+          {localeConst.ROUTES.aboutUs} | {localeConst.APP_TITLE}
         </title>
         <meta
           name="description"

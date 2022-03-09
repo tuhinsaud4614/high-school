@@ -18,6 +18,7 @@
     "paths": {
       "@component-navigation": ["components/navigation"],
       "@component/home": ["components/home"],
+      "@component/about-us": ["components/about-us"],
       "@component/icons": ["components/icons"],
       "@util": ["utils"],
       "@locale": ["locales"]

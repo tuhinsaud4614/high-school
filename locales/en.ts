@@ -46,7 +46,7 @@ export const ABOUT_PAGE = {
   locationTitle: "location",
   routes: {
     teachers: "our teachers",
-    alumni: "our pride alumni",
+    alumni: "our pride",
   },
 };
 

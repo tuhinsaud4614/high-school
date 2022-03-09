@@ -34,17 +34,16 @@ export const useTouchable = () => {
   return touchable;
 };
 
+const supportMatchMedia =
+  typeof window !== "undefined" && typeof window.matchMedia !== "undefined";
 export const useMediaQuery = (query: string) => {
-  const supportMatchMedia =
-    typeof window !== "undefined" && typeof window.matchMedia !== "undefined";
-
-  const [touchable, setTouchable] = useState(false);
-  const [matched, setMatched] = useState(() => {
+  const [touchable, setTouchable] = useState(() => {
     if (supportMatchMedia) {
       return window.matchMedia(query).matches;
     }
     return false;
   });
+  const [matched, setMatched] = useState(false);
 
   useIsomorphicLayoutEffect(() => {
     setTouchable(
@@ -71,7 +70,7 @@ export const useMediaQuery = (query: string) => {
       active = false;
       media.removeListener(listener);
     };
-  }, [query, supportMatchMedia]);
+  }, [query]);
 
-  return [matched, touchable];
+  return [matched, touchable] as const;
 };

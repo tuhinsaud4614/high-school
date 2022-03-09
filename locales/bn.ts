@@ -45,7 +45,7 @@ export const ABOUT_PAGE = {
   locationTitle: "অবস্থান",
   routes: {
     teachers: "আমাদের শিক্ষকবৃন্দ",
-    alumni: "আমাদের গর্ব প্রাক্তন শিক্ষার্থীবৃন্দ",
+    alumni: "আমাদের গর্ব",
   },
 };
 

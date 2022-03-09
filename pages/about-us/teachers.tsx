@@ -11,14 +11,13 @@ const Teachers: NextPageWithLayout = () => {
     <div>
       <Head>
         <title>
-          {localeConst.APP_TITLE} | {localeConst.ROUTES.teachers}
+          {localeConst.ROUTES.teachers} | {localeConst.APP_TITLE}
         </title>
         <meta
           name="description"
           content={`This is the home page of ${APP_TITLE}`}
         />
       </Head>
-      Teachers
     </div>
   );
 };
