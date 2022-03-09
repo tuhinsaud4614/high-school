@@ -14,7 +14,7 @@ const className = {
   root: "p-2 bg-white rounded-md relative shadow-md",
   container: "w-full pb-[125%] relative",
   imgContent: "absolute inset-0 w-full h-full z-10",
-  socialIcon: "ml-2 first:ml-0 inline-block hover:scale-105 duration-300",
+  socialIcon: "ml-2 first:ml-0 inline-block hover:scale-110 duration-300",
 };
 
 const socialVariants: Variants = {
@@ -59,7 +59,7 @@ const AlumniCard = () => {
       <div className={className.container}>
         <div className={className.imgContent}>
           <motion.div
-            className="relative w-full overflow-hidden"
+            className="relative w-full overflow-hidden rounded-md"
             animate={animationControls}
             initial={{ height: "100%" }}
             transition={{ bounce: 0, duration: 0.5 }}
@@ -80,26 +80,46 @@ const AlumniCard = () => {
               <a
                 href="https://www.facebook.com"
                 className={className.socialIcon}
+                rel="noreferrer"
+                target="_blank"
               >
-                <IoLogoFacebook className="text-white" size={20} />
+                <IoLogoFacebook
+                  className="text-white hover:text-red-500"
+                  size={20}
+                />
               </a>
               <a
                 href="https://www.twitter.com"
                 className={className.socialIcon}
+                rel="noreferrer"
+                target="_blank"
               >
-                <IoLogoTwitter className="text-white" size={20} />
+                <IoLogoTwitter
+                  className="text-white hover:text-red-500"
+                  size={20}
+                />
               </a>
               <a
                 href="https://www.instagram.com"
                 className={className.socialIcon}
+                rel="noreferrer"
+                target="_blank"
               >
-                <IoLogoInstagram className="text-white" size={20} />
+                <IoLogoInstagram
+                  className="text-white hover:text-red-500"
+                  size={20}
+                />
               </a>
               <a
                 href="https://www.linkedin.com"
                 className={className.socialIcon}
+                rel="noreferrer"
+                target="_blank"
               >
-                <IoLogoLinkedin className="text-white" size={20} />
+                <IoLogoLinkedin
+                  className="text-white hover:text-red-500"
+                  size={20}
+                />
               </a>
             </motion.div>
           </motion.div>
@@ -108,8 +128,8 @@ const AlumniCard = () => {
           ref={infoRef}
           className="absolute bottom-0 left-0 right-0 overflow-hidden"
         >
-          <h1 className="text-center text-xl text-blue-600">Hello world</h1>
-          <h3 className="text-center text-sm text-red-500">
+          <h1 className="text-center text-xl text-[#777]">Hello world</h1>
+          <h3 className="text-center text-sm text-red-400 capitalize">
             Businessman, Example
           </h3>
         </div>
