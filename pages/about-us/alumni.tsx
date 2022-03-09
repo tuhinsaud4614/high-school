@@ -21,7 +21,7 @@ const Alumni: NextPageWithLayout = () => {
       </Head>
       <section className="max-w-6xl mx-auto p-4">
         <Title>{localeConst.ABOUT_PAGE.routes.alumni}</Title>
-        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto">
+        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <AlumniCard />
           <AlumniCard />
           <AlumniCard />

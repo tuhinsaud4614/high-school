@@ -12,7 +12,7 @@ import {
 
 const className = {
   root: "p-2 bg-white rounded-md relative shadow-md",
-  container: "w-full pb-[125%] relative",
+  container: "w-full pb-[100%] sm:pb-[125%] relative",
   imgContent: "absolute inset-0 w-full h-full z-10",
   socialIcon: "ml-2 first:ml-0 inline-block hover:scale-110 duration-300",
 };
